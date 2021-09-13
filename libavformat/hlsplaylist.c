@@ -77,7 +77,6 @@ void ff_hls_write_stream_info(AVStream *st, AVIOContext *out, int bandwidth,
     if (!bandwidth) {
         av_log(NULL, AV_LOG_WARNING,
                 "Bandwidth info not available, set audio and video bitrates\n");
-        return;
     }
 
     avio_printf(out, "#EXT-X-STREAM-INF:BANDWIDTH=%d", bandwidth);
